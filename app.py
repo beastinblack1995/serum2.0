@@ -49,6 +49,159 @@ fet = ['Male',
  'SkinTyone_Porcelain',
  'SkinTyone_Tan']
 
+acneing = ['Aloe Vera',
+ 'Althaea Officinalis Root Extract',
+ 'Arnica Montana Extract',
+ 'Benzoyl Peroxide',
+ 'Betaine Salicylate',
+ 'Chamomile Extract',
+ 'Commiphora Mukul Resin Extract',
+ 'Cranberry Extract',
+ 'Dandelion Extract',
+ 'Decylene Glycol',
+ 'Docosahexaenoic Acid',
+ 'Birch',
+ 'Coneflower',
+ 'Farnesol',
+ 'Fennel',
+ 'Folic Acid',
+ 'Genistein',
+ 'Gluconolactone',
+ 'Knotweed',
+ 'Honeysuckle',
+ 'Garlic',
+ 'Lactic Acid',
+ 'Matricaria',
+ 'Mistletoe',
+ 'Myrtus Communis',
+ 'Oat',
+ 'Oleanolic Acid',
+ 'Paeonia Lactiflora Root Extract',
+ 'Palmitoyl Tripeptide-8',
+ 'Propolis Extract',
+ 'Pyridoxine Hcl',
+ 'Raspberry',
+ 'Rubus Chamaemorus Fruit Extract',
+ 'Sage',
+ 'Salicylic Acid',
+ 'Sigesbeckia Orientalis Extract',
+ 'Soybean',
+ 'Sulfur',
+ 'Magnolia Officinalis Bark Extract',
+ 'Zinc Sulfate',
+ 'Lauric Acid',
+ 'Sigesbeckia Orientalis Extract',
+ 'Rubus Chamaemorus Fruit Extract',
+ 'Niacinamide',
+ 'Phytosphingosine',
+ 'Potassium Azeloyl Diglycinate/Azelaic Acid',
+ 'Salix Nigra (Willow) Bark Extract',
+ 'Zinc Gluconate',
+ 'Zinc Pca',
+ 'Reservatrol']
+
+aginging = ['Acetyl Hexapeptide-8',
+ 'Aloe Barbadensis Extract',
+ 'Bakuchiol',
+ 'Caffeine',
+ 'Centella Asiatica Extract',
+ 'Colloidal Oatmeal',
+ 'Copper Tripeptide-1',
+ 'Haematococcus Pluvialis Extract',
+ 'Panax Ginseng Root Extract',
+ 'Acetyl Hexapeptide-1',
+ 'Adenosine',
+ 'Ascorbic Acid (Vitamin C/Ascorbyl Glucoside/Magnesium Ascorbyl Phosphate/Tetrahexyldecyl Ascorbate/Ascorbyl Tetraisopalmitate)',
+ 'Calcium Ketogluconate',
+ 'Carnosine',
+ 'Commiphora Mukul Resin Extract',
+ 'Cranberry',
+ 'Dipeptide Diaminobutyroyl Benzylamide Diacetate',
+ 'Eicosapentaenoic Acid',
+ 'Eucalyptus Globulus',
+ 'Ferulic Acid',
+ 'Fucus Vesiculosus Extract',
+ 'Genistein',
+ 'Ginkgo Biloba',
+ 'Gluconolactone',
+ 'Glycolic Acid',
+ 'Glycosaminoglycans',
+ 'Hemp',
+ 'Green Tea',
+ 'Hexapeptide-10',
+ 'Hydrolyzed Extensin',
+ 'Hydrolyzed Hyaluronic Acid',
+ 'Hydrolyzed Viola Tricolor Extract',
+ 'Soy',
+ 'Lactic Acid',
+ 'Laminaria',
+ 'Mandelic Acid',
+ 'Oxido Reductases',
+ 'Palmitoyl Pentapeptide-4',
+ 'Palmitoyl Tripeptide-1',
+ 'Pea',
+ 'Phaeodactylum Tricornutum Extract',
+ 'Polycaprolactone',
+ 'Polylysine',
+ 'Proline',
+ 'Raspberry',
+ 'Resveratrol',
+ 'Serenoa Serrulata Fruit Extract',
+ 'Succinic Acid',
+ 'RETINOL LIPOSOME',
+ 'Ubiquinone']
+
+
+brighting =['Acetyl Glucosamine',
+ 'Aloe Vera',
+ 'Apple Cider Vinegar',
+ 'Arbutin',
+ 'Ascorbic Acid (Vitamin C/Ascorbyl Glucoside/Magnesium Ascorbyl Phosphate/Tetrahexyldecyl Ascorbate/Ascorbyl Tetraisopalmitate)',
+ 'Bearberry',
+ 'Boerhavia Diffusa Root Extract',
+ 'Chamomile',
+ 'Chrysin',
+ 'Citrus Aurantifolia',
+ 'Cranberry',
+ 'Cucumis Melo Cantalupensis Fruit Extract',
+ 'Dimethylmethoxy Chromanol',
+ 'Ferulic Acid',
+ 'Gallic Acid',
+ 'Genistein',
+ 'Ginkgo Biloba',
+ 'Glutathione',
+ 'Glycolic Acid',
+ 'Hydroquinone',
+ 'Kojic Acid',
+ 'Lactic Acid',
+ 'Licorice',
+ 'Matricaria',
+ 'Morus Alba Bark Extract',
+ 'Pearl Powder',
+ 'Phenylethyl Resorcinol',
+ 'Phytic Acid',
+ 'Potassium Azeloyl Diglycinate (Azelaic Acid)',
+ 'Resveratrol',
+ 'Serenoa Serrulata Fruit Extract',
+ 'Sodium Lactate',
+ 'Strawberry',
+ 'Undaria Pinnatifida Extract',
+ 'Zinc Sulfate',
+ 'Hexapeptide-2',
+ 'Hexylresorcinol',
+ 'Morus Alba Root Extract',
+ 'Niacinamide',
+ 'Panax Ginseng root extract',
+ 'Tetrapeptide-30',
+ 'Glycine Soja (Soybean) Seed Extrac',
+ 'Tranexamic Acid',
+ 'Indian Gooseberry',
+ 'Reishi',
+ 'Papaya',
+ 'Undecylenoyl Phenylalanine',
+ 'Mulberry',
+ 'Nasturtium',
+ 'Undaria Pinnatifida Extract']
 
 # Create Flask object to run
 app = Flask(__name__,template_folder= 'templates' )
@@ -176,7 +329,7 @@ def acne_imp(custtdetails):
     
     dic_acne_supp = {} 
    
-    for j  in (df_acne_akmal['name'].dropna()):
+    for j  in acneing:
         if j not in important_ingredients_acne:
             j = j.replace('/','_')
             if j[0] == ' ':
@@ -235,7 +388,7 @@ def aging_imp(custtdetails):
     i = None
     
     dic_aging_supp = {}    
-    for j  in (df_aging_akmal['name'].dropna()):
+    for j  in aginging:
         if j not in important_ingredients_aging:
             j = j.replace('/','_')
             if j[0] == ' ':
@@ -295,7 +448,7 @@ def brightning_imp(custtdetails):
     i = None
     
     dic_brightning_supp = {}    
-    for j  in (df_brightning_akmal['name'].dropna()):
+    for j  in brighting:
         if j not in important_ingredients_brightning:
             j = j.replace('/','_')
             print(j)            
