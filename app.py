@@ -237,6 +237,28 @@ dir_list_acne = os.listdir('Anti-Acnexx')
 dir_list_aging = os.listdir('Anti-agingxx')
 dir_list_brightning = os.listdir('Skin Brighteningxx')
 
+d = []
+for i in dir_list_acne:
+    if i[0] == ' ':
+       i = i [1:]
+    d.append(i)
+dir_list_acne = d    
+
+d = []
+for i in dir_list_aging:
+    if i[0] == ' ':
+       i = i [1:]
+    d.append(i)
+dir_list_aging = d  
+
+
+d = []
+for i in dir_list_brightning:
+    if i[0] == ' ':
+       i = i [1:]
+    d.append(i)
+dir_list_brightning = d  
+
 #df_brightning_akmal['name'] = df_brightning_akmal['name'].str.replace(',','')
 
 def givlis_df(dictionin):
@@ -336,6 +358,7 @@ def acne_imp(custtdetails):
                 j = j[1:]            
             
             for p in dir_list_acne:
+                
                 if j in p:
                     j = p
                     break              
