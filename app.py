@@ -233,9 +233,9 @@ important_ingredients_brightning = ['Acetyl Glucosamine','Arbutin',
 
 
 
-dir_list_acne = os.listdir('Anti-Acnex')
-dir_list_aging = os.listdir('Anti-agingx')
-dir_list_brightning = os.listdir('Skin Brighteningx')
+dir_list_acne = os.listdir('Anti-Acnexx')
+dir_list_aging = os.listdir('Anti-agingxx')
+dir_list_brightning = os.listdir('Skin Brighteningxx')
 
 #df_brightning_akmal['name'] = df_brightning_akmal['name'].str.replace(',','')
 
