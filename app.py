@@ -225,9 +225,9 @@ important_ingredients_brightning = ['Acetyl Glucosamine','Arbutin',
 
 
 
-df_acne_akmal = pd.read_excel('Anti Acne Serum file Akmal (2).xlsx')
-df_aging_akmal = pd.read_excel('Anti aging Serum file Akmal (2).xlsx')
-df_brightning_akmal = pd.read_excel('Brightning Serum file Akmal (2).xlsx')
+#df_acne_akmal = pd.read_excel('Anti Acne Serum file Akmal (2).xlsx')
+#df_aging_akmal = pd.read_excel('Anti aging Serum file Akmal (2).xlsx')
+#df_brightning_akmal = pd.read_excel('Brightning Serum file Akmal (2).xlsx')
 
 
 
