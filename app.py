@@ -237,27 +237,7 @@ dir_list_acne = os.listdir('Anti-Acnexx')
 dir_list_aging = os.listdir('Anti-agingxx')
 dir_list_brightning = os.listdir('Skin Brighteningxx')
 
-d = []
-for i in dir_list_acne:
-    if i[0] == ' ':
-       i = i [1:]
-    d.append(i)
-dir_list_acne = d    
-
-d = []
-for i in dir_list_aging:
-    if i[0] == ' ':
-       i = i [1:]
-    d.append(i)
-dir_list_aging = d  
-
-
-d = []
-for i in dir_list_brightning:
-    if i[0] == ' ':
-       i = i [1:]
-    d.append(i)
-dir_list_brightning = d  
+  
 
 #df_brightning_akmal['name'] = df_brightning_akmal['name'].str.replace(',','')
 
@@ -336,9 +316,9 @@ def acne_imp(custtdetails):
                 i = p
                 break          
         
+        print(p)
         
-        
-        xgb = joblib.load(f'Anti-Acnex/{p}')
+        xgb = joblib.load(f'Anti-Acnexx/{p}')
         proba = list(xgb.predict_proba(givlis_df(custtdetails))[0])
         pred = xgb.predict(givlis_df(custtdetails))[0]
         #print(i,proba,pred,proba.index(max(proba)))
@@ -358,11 +338,12 @@ def acne_imp(custtdetails):
                 j = j[1:]            
             
             for p in dir_list_acne:
+                print(p)
                 
                 if j in p:
                     j = p
                     break              
-            xgb = joblib.load(f'Anti-Acnex/{p}')
+            xgb = joblib.load(f'Anti-Acnexx/{p}')
             proba = list(xgb.predict_proba(givlis_df(custtdetails))[0])
             pred = xgb.predict(givlis_df(custtdetails))[0]
             #print(i,proba,pred,proba.index(max(proba)))
@@ -398,7 +379,7 @@ def aging_imp(custtdetails):
                 break        
         
         
-        xgb = joblib.load(f'Anti-agingx/{p}')
+        xgb = joblib.load(f'Anti-agingxx/{p}')
         proba = list(xgb.predict_proba(givlis_df(custtdetails))[0])
         pred = xgb.predict(givlis_df(custtdetails))[0]
         #print(i,proba,pred,proba.index(max(proba)))  
@@ -423,7 +404,7 @@ def aging_imp(custtdetails):
                     break            
             
             
-            xgb = joblib.load(f'Anti-agingx/{p}')
+            xgb = joblib.load(f'Anti-agingxx/{p}')
             proba = list(xgb.predict_proba(givlis_df(custtdetails))[0])
             pred = xgb.predict(givlis_df(custtdetails))[0]
             #print(i,proba,pred,proba.index(max(proba)))
@@ -458,7 +439,7 @@ def brightning_imp(custtdetails):
                 i = p
                 break
             
-        xgb = joblib.load(f'Skin Brighteningx/{p}')
+        xgb = joblib.load(f'Skin Brighteningxx/{p}')
         proba = list(xgb.predict_proba(givlis_df(custtdetails))[0])
         pred = xgb.predict(givlis_df(custtdetails))[0]
         #print(i,proba,pred,proba.index(max(proba)))  
@@ -485,7 +466,7 @@ def brightning_imp(custtdetails):
                     print(p)
                     j = p
                     break            
-            xgb = joblib.load(f'Skin Brighteningx/{p}')
+            xgb = joblib.load(f'Skin Brighteningxx/{p}')
             
             proba = list(xgb.predict_proba(givlis_df(custtdetails))[0])
             pred = xgb.predict(givlis_df(custtdetails))[0]
