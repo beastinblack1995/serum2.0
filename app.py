@@ -262,7 +262,7 @@ def givlis_df(dictionin):
         
         
         
-    if   (dictionin['Race'] == 'White Skin'):
+    if   (dictionin['Race'] == 'European'):
         df['Australoid'] = [1]  
       
         
@@ -273,7 +273,7 @@ def givlis_df(dictionin):
     if   (dictionin['Race'] == 'Middle Eastern'):
         df['Caucasoid'] = [1]         
         
-    if  (dictionin['Race'] == 'Black Skin') :
+    if  (dictionin['Race'] == 'African') :
         df['Negroid'] = [1] 
       
     if  (dictionin['Race'] == 'South Asian') :
