@@ -280,7 +280,7 @@ def givlis_df(dictionin):
         df['Mongoloid'] = [1]     
       
       
-     if (dictionin['Race'] == 'South East Asian') :
+    if (dictionin['Race'] == 'South East Asian') :
         df['Mongoloid'] = [1]       
       
         
