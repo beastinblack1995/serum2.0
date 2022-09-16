@@ -266,11 +266,9 @@ def givlis_df(dictionin):
         df['Australoid'] = [1]  
       
         
-    if   (dictionin['Race'] == 'Latino') :
+    if   (dictionin['Race'] == 'Latino Hispanic') or (dictionin['Race'] == 'Middle Eastern'):
         df['Caucasoid'] = [1]
-        
-    if  (dictionin['Race'] == 'Middle Eastern') :
-        df['Hispanic'] = [1]        
+         
         
     if  (dictionin['Race'] == 'Black Skin') :
         df['Negroid'] = [1] 
