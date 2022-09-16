@@ -261,21 +261,22 @@ def givlis_df(dictionin):
         df['Elder Age'] = [1]
         
         
-    if   (dictionin['Race'] == 'Negroid') :
-        df['Negroid'] = [1]
         
-    if   (dictionin['Race'] == 'Caucasoid') :
+    if   (dictionin['Race'] == 'White Skin'):
+        df['Australoid'] = [1]  
+      
+        
+    if   (dictionin['Race'] == 'Latino') :
         df['Caucasoid'] = [1]
         
-    if   (dictionin['Race'] == 'Mongoloid') :
-        df['Mongoloid'] = [1]
+    if  (dictionin['Race'] == 'Middle Eastern') :
+        df['Hispanic'] = [1]        
         
-    if  (dictionin['Race'] == 'Australoid') :
-        df['Australoid'] = [1]        
-        
-    if  (dictionin['Race'] == 'Capoid') :
-        df['Capoid'] = [1]         
-        
+    if  (dictionin['Race'] == 'Black Skin') :
+        df['Negroid'] = [1] 
+      
+    if  (dictionin['Race'] == 'South Asian') or (dictionin['Race'] == 'South East Asian') :
+        df['Mongoloid'] = [1]     
         
     if  (dictionin['Climate'] == 'Tropical') :
         df['Tropical'] = [1]
