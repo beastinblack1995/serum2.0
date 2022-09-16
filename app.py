@@ -268,13 +268,21 @@ def givlis_df(dictionin):
         
     if   (dictionin['Race'] == 'Latino Hispanic') or (dictionin['Race'] == 'Middle Eastern'):
         df['Caucasoid'] = [1]
-         
+      
+      
+    if   (dictionin['Race'] == 'Middle Eastern'):
+        df['Caucasoid'] = [1]         
         
     if  (dictionin['Race'] == 'Black Skin') :
         df['Negroid'] = [1] 
       
     if  (dictionin['Race'] == 'South Asian') or (dictionin['Race'] == 'South East Asian') :
         df['Mongoloid'] = [1]     
+      
+      
+     if (dictionin['Race'] == 'South East Asian') :
+        df['Mongoloid'] = [1]       
+      
         
     if  (dictionin['Climate'] == 'Tropical') :
         df['Tropical'] = [1]
